@@ -1,0 +1,5 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^err\.txt$
+^out\.txt$
+^whereami\.json$

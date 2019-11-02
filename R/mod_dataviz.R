@@ -150,6 +150,8 @@ mod_dataviz_server <- function(input, output, session, type){
   
   observeEvent( input$go , {
     
+    whereami::whereami(tag = 'go')
+    
     x <- rlang::sym(input$x)
     
     if (type == "point"){
@@ -281,6 +283,7 @@ mod_dataviz_server <- function(input, output, session, type){
   
   
   output$plot <- renderPlot({
+    whereami::whereami(tag = 'plot')
     r$plot
   })
   

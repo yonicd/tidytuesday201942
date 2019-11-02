@@ -4,7 +4,7 @@
 \alias{run_app}
 \title{Run the Shiny Application}
 \usage{
-run_app(...)
+run_app(..., shiny_opts = list(port = 1234L))
 }
 \description{
 Run the Shiny Application

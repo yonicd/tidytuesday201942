@@ -1,0 +1,5 @@
+Loading tidytuesday201942
+Loading required package: shiny
+
+Listening on http://127.0.0.1:6012
+Warning: Removed 1189 rows containing missing values (geom_point).
