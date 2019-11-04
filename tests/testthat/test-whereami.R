@@ -8,14 +8,18 @@ testthat::describe('reactive',{
   
   plot_counter <- testwhereami(expr = {
     
+    #find geom point option
+    
     elem1 <- asyncr(
       remDr,
       using = "css selector",
       value = '#raw_data > div > ul > li:nth-child(1) > a'
     )
     
+    #click geom point option
     elem1$clickElement()
     
+    #what is the current plot img src?
     plot_src <- asyncr(
       remDr,
       using = "css selector",
@@ -23,14 +27,17 @@ testthat::describe('reactive',{
       attrib = 'src'
     )
     
+    #find go button
     go_btn <- asyncr(
       remDr,
       using = "css selector",
       value = '#dataviz_ui_1-go'
     )
     
+    #click go button
     go_btn$clickElement()
     
+    #wait for the plot to render and update the img src
     asyncr_update(
       remDr,
       using = "css selector",
@@ -42,11 +49,11 @@ testthat::describe('reactive',{
     
   })
   
-  it('plot',{
+  it('reactive hits in plot reactive chunk',{
     expect_count(plot_counter,'plot',2)
   })
   
-  it('go',{
+  it('reactive hits of go tbn',{
     expect_count(plot_counter,'go',1)
   })
     
