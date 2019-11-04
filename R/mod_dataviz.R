@@ -14,6 +14,7 @@
 #' @export 
 #' @import shiny
 #' @importFrom htmltools tags
+#' @importFrom whereami whereami
 mod_dataviz_ui <- function(id, type = c("point", "hist", "boxplot", "bar")){
   ns <- NS(id)
   tagList(
