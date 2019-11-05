@@ -8,6 +8,8 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     shiny,
+    ggplot2,
+    rmarkdown,
     golem,
     htmltools,
     magrittr,
@@ -24,6 +26,9 @@ Imports:
 RoxygenNote: 6.1.1
 URL: http://www.github.com/ColinFay/tidytuesday201942
 BugReports: http://www.github.com/ColinFay/tidytuesday201942/issues
-Suggests: 
+Suggests:
+    reactor,
     testthat,
     RSelenium
+Remotes:
+    yonicd/reactor
